@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var router: Router
+    let moviesViewModel : MoviesViewModel
     
     @State var movieList : [Movie] = []
     
@@ -25,20 +26,9 @@ struct HomeView: View {
         }
         .task {
             do {
-                //TODO: api key move to variable
-                if let url = URL(string: "https://my.api.mockaroo.com/movies.json?key=cb03b960") {
-                    let (data, _) = try await URLSession.shared.data(from: url)
-                    print(data)
-                    let response = try JSONDecoder().decode(MovieListResponseMessage.self, from: data)
-                    DispatchQueue.main.async {
-                        movieList = response.items
-                    }
-                    if response.errorMessage != "" {
-                        //TODO: show application message
-                        DispatchQueue.main.async {
-                            movieList = Movie.getMovies()
-                        }
-                    }
+                try await moviesViewModel.getMovies()
+                DispatchQueue.main.async {
+                    movieList = moviesViewModel.movies
                 }
                 
             } catch {
@@ -60,5 +50,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(moviesViewModel: MoviesViewModel())
 }

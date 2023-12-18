@@ -10,17 +10,18 @@ import SwiftUI
 @main
 struct MoviesAppApp: App {
     @ObservedObject var router = Router()
+    let moviesViewModel = MoviesViewModel()
     
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.navPath) {
-                HomeView()
+                HomeView(moviesViewModel: moviesViewModel)
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
                         case .movieList:
-                            HomeView()
+                            HomeView(moviesViewModel: moviesViewModel)
                         case .movieDetail(let movie):
-                            MovieDetailView(movie: movie)
+                            MovieDetailView(moviesViewModel: moviesViewModel, movie: movie)
                         }
                     }
             }

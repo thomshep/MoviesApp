@@ -15,7 +15,7 @@ struct MovieItemView: View {
                 image.resizable()
             }
             placeholder: {
-                Color.red
+                Color.gray
             }
             .frame(width: 70, height: 70)
             .clipShape(RoundedRectangle(cornerRadius: 25))

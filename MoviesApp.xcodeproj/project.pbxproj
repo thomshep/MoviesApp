@@ -18,6 +18,7 @@
 		E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */; };
 		E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3FB2B2FD447005DCB7B /* Router.swift */; };
 		E944B3FE2B2FD627005DCB7B /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3FD2B2FD627005DCB7B /* MovieDetailView.swift */; };
+		E944B4012B2FDF2B005DCB7B /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B4002B2FDF2B005DCB7B /* MoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
 		E944B3FB2B2FD447005DCB7B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E944B3FD2B2FD627005DCB7B /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		E944B4002B2FDF2B005DCB7B /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		E90EBA552B2F8E9600E22E0D /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E944B3FF2B2FDF1B005DCB7B /* ViewModel */,
 				E944B3F82B2FBB92005DCB7B /* View */,
 				E944B3F52B2FB654005DCB7B /* Model */,
 				E90EBA562B2F8E9600E22E0D /* MoviesAppApp.swift */,
@@ -153,6 +156,14 @@
 				E944B3FD2B2FD627005DCB7B /* MovieDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E944B3FF2B2FDF1B005DCB7B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E944B4002B2FDF2B005DCB7B /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */,
 				E90EBA592B2F8E9600E22E0D /* HomeView.swift in Sources */,
 				E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */,
+				E944B4012B2FDF2B005DCB7B /* MoviesViewModel.swift in Sources */,
 				E90EBA572B2F8E9600E22E0D /* MoviesAppApp.swift in Sources */,
 				E944B3F72B2FB662005DCB7B /* Movie.swift in Sources */,
 			);

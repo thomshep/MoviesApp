@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MovieDetailView: View {
+    @EnvironmentObject var router: Router
+    let moviesViewModel : MoviesViewModel
     @State var movie : Movie
     
     var body: some View {
@@ -26,5 +28,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(movie: Movie.getPlaceholderMovie())
+    MovieDetailView(moviesViewModel: MoviesViewModel(), movie: Movie.getPlaceholderMovie())
 }
