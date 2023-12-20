@@ -21,7 +21,7 @@ struct MovieItemView: View {
             .clipShape(RoundedRectangle(cornerRadius: 25))
             Text(movie.title)
             Text("-")
-            Text(movie.directors)
+            Text(movie.releaseState)
         }
     }
 }

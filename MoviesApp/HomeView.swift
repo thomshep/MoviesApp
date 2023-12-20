@@ -36,7 +36,7 @@ struct HomeView: View {
                 print("error")
                 print(error)
                 DispatchQueue.main.async {
-                    movieList = Movie.getMovies()
+                    movieList = moviesViewModel.movies
                 }
             }
             

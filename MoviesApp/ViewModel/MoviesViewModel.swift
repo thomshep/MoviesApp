@@ -15,15 +15,31 @@ class MoviesViewModel : ObservableObject {
     func getMovies() async throws -> Void {
         //TODO: api key move to variable
         if let url = URL(string: "https://my.api.mockaroo.com/movies.json?key=cb03b960") {
-            let (data, _) = try await URLSession.shared.data(from: url)
+            
             do {
+                let (data, _) = try await URLSession.shared.data(from: url)
                 let response = try JSONDecoder().decode(MovieListResponseMessage.self, from: data)
                 if response.errorMessage != "" {
                     print(response.errorMessage)
                     throw NSError(domain: "", code: 0)
                 } else {
+                    
+                    
                     self.movies = response.items
-                    self.saveMoviesCache(movies: response.items)
+                    
+                    // Order by release date
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "dd MMM yyyy"
+                    
+                    self.movies.sort { movie1, movie2 in
+                        if let dateMovie1 = formatter.date(from: movie1.releaseState), let dateMovie2 = formatter.date(from: movie2.releaseState) {
+                            return dateMovie1 > dateMovie2
+                        }
+                        
+                        return false
+                    }
+                    
+                    self.saveMoviesCache(movies: self.movies)
                     
                 }
             } catch {
