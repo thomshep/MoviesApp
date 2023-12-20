@@ -73,16 +73,24 @@ class MoviesViewModel : ObservableObject {
     func saveMoviesCache(movies: [Movie]) {
         do {
             let realm = try Realm()
+            
+            // Delete all previous data
+            try realm.write {
+                realm.deleteAll()
+            }
+            
             try realm.write {
                 for movie in movies {
                     realm.add(movie.getPersistedObject())
                 }
             }
-        } catch {
             
+        } catch {
+            print(error)
         }
     }
     
+    // Get categories API is needed to make this more efficient
     func getCategories() {
         self.movies.forEach { movie in
             movie.genreList.forEach { genre in

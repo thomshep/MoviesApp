@@ -284,8 +284,8 @@
             filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getCategories()"
             landmarkType = "7">
          </BreakpointContent>
