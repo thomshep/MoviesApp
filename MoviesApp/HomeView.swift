@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var router: Router
+    @State var showAlert : Bool = false
     let moviesViewModel : MoviesViewModel
     
     @State var movieList : [Movie] = []
@@ -25,26 +26,21 @@ struct HomeView: View {
             }
         }
         .task {
-            do {
-                try await moviesViewModel.getMovies()
-                DispatchQueue.main.async {
-                    movieList = moviesViewModel.movies
-                }
-                
-            } catch {
-                //TODO: show application message
-                print("error")
-                print(error)
-                DispatchQueue.main.async {
-                    movieList = moviesViewModel.movies
-                }
+            await moviesViewModel.getMovies()
+            DispatchQueue.main.async {
+                movieList = moviesViewModel.movies
             }
-            
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text("Películas")
             }
+        }
+        .onChange(of: moviesViewModel.error) {
+            showAlert = moviesViewModel.error != nil
+        }
+        .alert(moviesViewModel.error?.description ?? "", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
         }
     }
 }

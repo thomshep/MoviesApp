@@ -10,9 +10,11 @@ import RealmSwift
 
 class MoviesViewModel : ObservableObject {
     @Published var movies : [Movie] = []
+    @Published var categories : [String] = []
+    @Published var error : CustomError?
     
     @MainActor
-    func getMovies() async throws -> Void {
+    func getMovies() async -> Void {
         //TODO: api key move to variable
         if let url = URL(string: "https://my.api.mockaroo.com/movies.json?key=cb03b960") {
             
@@ -21,11 +23,13 @@ class MoviesViewModel : ObservableObject {
                 let response = try JSONDecoder().decode(MovieListResponseMessage.self, from: data)
                 if response.errorMessage != "" {
                     print(response.errorMessage)
-                    throw NSError(domain: "", code: 0)
+                    self.error = .errorFetchingData
                 } else {
                     
                     
                     self.movies = response.items
+                    
+                    getCategories()
                     
                     // Order by release date
                     let formatter = DateFormatter()
@@ -38,13 +42,14 @@ class MoviesViewModel : ObservableObject {
                         
                         return false
                     }
-                    
+                                        
                     self.saveMoviesCache(movies: self.movies)
                     
                 }
             } catch {
                 self.movies = getCachedMovies()
-                throw NSError(domain: "", code: 0)
+                getCategories()
+                self.error = .errorFetchingData
             }
 
         }
@@ -78,4 +83,14 @@ class MoviesViewModel : ObservableObject {
         }
     }
     
+    func getCategories() {
+        self.movies.forEach { movie in
+            movie.genreList.forEach { genre in
+                if !categories.contains(genre.value) {
+                    categories.append(genre.value)
+                }
+            }
+        }
+        print(categories)
+    }
 }
