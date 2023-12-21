@@ -20,7 +20,7 @@ struct MoviesAppApp: App {
                     if showSplashScreen {
                         SplashScreenView()
                     } else {
-                        HomeView(moviesViewModel: moviesViewModel)
+                        MovieList(moviesViewModel: moviesViewModel)
                             .task {
                                 // Ask for permissions
                                 let permissionsHandler = Permissions()
@@ -31,7 +31,7 @@ struct MoviesAppApp: App {
                             .navigationDestination(for: Router.Destination.self) { destination in
                                 switch destination {
                                 case .movieList:
-                                    HomeView(moviesViewModel: moviesViewModel)
+                                    MovieList(moviesViewModel: moviesViewModel)
                                 case .movieDetail(let movie):
                                     MovieDetailView(moviesViewModel: moviesViewModel, movie: movie)
                                 }

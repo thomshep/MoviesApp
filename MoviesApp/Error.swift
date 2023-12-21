@@ -13,7 +13,7 @@ enum CustomError: LocalizedError {
     var description: String? {
         switch self {
         case .errorFetchingData:
-            return "Error obteniendo información de películas"
+            return "Error getting movies information"
         }
     }
 }

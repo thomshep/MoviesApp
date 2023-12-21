@@ -10,19 +10,34 @@ import SwiftUI
 struct MovieItemView: View {
     @State var movie : Movie
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
             AsyncImage(url: URL(string: movie.image)) { image in
-                image.resizable()
+                image
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .frame(width: 150, height: 200)
+                    .aspectRatio(contentMode: .fit)
             }
             placeholder: {
-                Color.gray
+                Color.white.opacity(0.1)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .frame(width: 150, height: 200)
             }
-            .frame(width: 70, height: 70)
-            .clipShape(RoundedRectangle(cornerRadius: 25))
+            
+            Spacer()
+                .frame(height: 8)
+            
             Text(movie.title)
-            Text("-")
-            Text(movie.releaseState)
+                .lineLimit(1)
+                .foregroundStyle(Color.white)
+                .font(.headline)
+            
+            Text(movie.runtimeStr)
+                .foregroundStyle(Color.gray)
+                .font(.caption)
+            
         }
+        .frame(width: 150)
     }
 }
 

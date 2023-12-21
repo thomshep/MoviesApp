@@ -11,7 +11,7 @@ struct SplashScreenView: View {
     var body: some View {
         ZStack {
             VStack {
-                LottieView(loopMode: .playOnce, animation: "camera")
+                LottieView(loopMode: .playOnce, animation: "SplashAnimation")
                     .scaleEffect(0.2)
             }
             

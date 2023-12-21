@@ -10,6 +10,8 @@ import RealmSwift
 
 class MoviesViewModel : ObservableObject {
     @Published var movies : [Movie] = []
+    @Published var moviesFiltered : [Movie] = []
+    @Published var mostPopularMovies : [Movie] = []
     @Published var categories : [String] = []
     @Published var error : CustomError?
     
@@ -42,12 +44,17 @@ class MoviesViewModel : ObservableObject {
                         
                         return false
                     }
+                    
+                    self.moviesFiltered = self.movies
+                    mostPopularMovies(moviesList: self.movies)
                                         
                     self.saveMoviesCache(movies: self.movies)
                     
                 }
             } catch {
                 self.movies = getCachedMovies()
+                self.moviesFiltered = self.movies
+                mostPopularMovies(moviesList: self.movies)
                 getCategories()
                 self.error = .errorFetchingData
             }
@@ -100,5 +107,22 @@ class MoviesViewModel : ObservableObject {
             }
         }
         print(categories)
+    }
+    
+    func filterMovies(filter: String) {
+        if filter.isEmpty {
+            self.moviesFiltered = self.movies
+        } else {
+            self.moviesFiltered = self.movies.filter { movie in
+                return movie.title.contains(filter)
+            }
+        }
+        
+    }
+    
+    func mostPopularMovies(moviesList : [Movie]) {
+        self.mostPopularMovies = moviesList.sorted { movie1, movie2 in
+            return Float(movie1.imDbRating) ?? 0 > Float(movie2.imDbRating) ?? 0
+        }
     }
 }
