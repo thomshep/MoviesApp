@@ -109,12 +109,15 @@ class MoviesViewModel : ObservableObject {
         print(categories)
     }
     
-    func filterMovies(filter: String) {
-        if filter.isEmpty {
+    func filterMovies(filter: String, genre: String) {
+        if filter.isEmpty && genre.isEmpty {
             self.moviesFiltered = self.movies
         } else {
             self.moviesFiltered = self.movies.filter { movie in
-                return movie.title.contains(filter)
+                return (filter.isEmpty || movie.title.contains(filter)) && 
+                       (genre.isEmpty || movie.genreList.first(where: { genreItem in
+                                                return genreItem.key == genre
+                                            }) != nil)
             }
         }
         

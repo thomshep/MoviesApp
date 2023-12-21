@@ -56,7 +56,11 @@ struct MovieList: View {
                                         GenreItemView(name: category, selected: $selectedCategory)
                                             .onTapGesture {
                                                 DispatchQueue.main.async{
-                                                    selectedCategory = category
+                                                    if selectedCategory == category {
+                                                        selectedCategory = ""
+                                                    } else {
+                                                        selectedCategory = category
+                                                    }
                                                 }
                                                 
                                             }
@@ -88,7 +92,13 @@ struct MovieList: View {
             }
         }
         .onChange(of: searchText, { oldValue, newValue in
-            moviesViewModel.filterMovies(filter: newValue)
+            moviesViewModel.filterMovies(filter: newValue, genre: selectedCategory)
+            DispatchQueue.main.async {
+                movieList = moviesViewModel.moviesFiltered
+            }
+        })
+        .onChange(of: selectedCategory, { oldValue, newValue in
+            moviesViewModel.filterMovies(filter: searchText, genre: newValue)
             DispatchQueue.main.async {
                 movieList = moviesViewModel.moviesFiltered
             }
