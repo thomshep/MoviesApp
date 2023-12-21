@@ -108,7 +108,7 @@ struct MovieList: View {
             ToolbarItem(placement: .principal) {
                 Text("Movies")
                     .foregroundStyle(Color.white)
-                    .font(.title)
+                    .font(.title2)
             }
             
             ToolbarItem(placement: .topBarTrailing) {

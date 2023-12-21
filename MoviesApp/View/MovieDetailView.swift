@@ -14,14 +14,89 @@ struct MovieDetailView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                Text(movie.plot)
-
-            }
+            ScrollView {
+                VStack(spacing: 22) {
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            
+                            VStack(alignment: .leading) {
+                                AsyncImage(url: URL(string: movie.image)) { image in
+                                    image
+                                        .resizable()
+                                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                                        .frame(width: 200, height: 360)
+                                        .aspectRatio(contentMode: .fit)
+                                }
+                            placeholder: {
+                                Color.white.opacity(0.1)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    .frame(width: 200, height: 360)
+                            }
+                                
+                            }
+                            
+                            Spacer()
+                            
+                            VStack {
+                                MovieDetailInfoView(icon: "video", title: "Genre", info: movie.genreList.first?.value ?? "-")
+                                
+                                Spacer()
+                                
+                                MovieDetailInfoView(icon: "alarm", title: "Duration", info: movie.runtimeStr)
+                                
+                                Spacer()
+                                
+                                MovieDetailInfoView(icon: "star.leadinghalf.filled", title: "Rating", info: movie.imDbRating)
+                                
+                                
+                            }
+                        }
+                        
+                        Spacer()
+                            .frame(height: 8)
+                        
+                        Text(movie.title)
+                            .lineLimit(1)
+                            .foregroundStyle(Color.white)
+                            .font(.title2)
+                        
+                        Text(movie.year)
+                            .foregroundStyle(Color.gray)
+                            .font(.caption)
+                    }
+                    
+                    
+                    
+                    Divider()
+                        .frame(height: 2)
+                        .overlay(Color.white)
+                        
+                    
+                    HStack {
+                        Text("Plot")
+                            .foregroundStyle(Color.white)
+                            .font(.title3.weight(.semibold))
+                        Spacer()
+                    }
+                    
+                    
+                    Text(movie.plot)
+                        .foregroundStyle(Color.gray)
+                        .font(.subheadline)
+                    
+                    Spacer()
+                    
+                }.padding()
+                
+            }.padding()
         }
+        .background(Color( #colorLiteral(red: 0.11, green: 0.12, blue: 0.20, alpha: 1.00) ))
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text(movie.title)
+                Text("Movie details")
+                    .foregroundStyle(Color.white)
+                    .font(.title2)
             }
         }
     }
