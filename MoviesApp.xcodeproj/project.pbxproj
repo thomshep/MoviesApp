@@ -73,6 +73,7 @@
 		E9303A3C2B33EF5A00083D00 /* MovieScrollableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScrollableList.swift; sourceTree = "<group>"; };
 		E9303A3E2B34AC7F00083D00 /* MovieDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoView.swift; sourceTree = "<group>"; };
 		E9303A432B34BDF600083D00 /* MovieRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRealm.swift; sourceTree = "<group>"; };
+		E9303A452B34C2CE00083D00 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E944B3F62B2FB662005DCB7B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
 		E944B3FB2B2FD447005DCB7B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 				E928B5AA2B3375A400F457EC /* Error.swift */,
 				E928B5AD2B33C41100F457EC /* Permissions.swift */,
 				E928B5B62B33C85800F457EC /* LottieView.swift */,
+				E9303A452B34C2CE00083D00 /* Config.xcconfig */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -422,6 +424,7 @@
 /* Begin XCBuildConfiguration section */
 		E90EBA752B2F8E9900E22E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -485,6 +488,7 @@
 		};
 		E90EBA762B2F8E9900E22E0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -541,6 +545,7 @@
 		};
 		E90EBA782B2F8E9900E22E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -573,6 +578,7 @@
 		};
 		E90EBA792B2F8E9900E22E0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -605,6 +611,7 @@
 		};
 		E90EBA7B2B2F8E9900E22E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +631,7 @@
 		};
 		E90EBA7C2B2F8E9900E22E0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,6 +651,7 @@
 		};
 		E90EBA7E2B2F8E9900E22E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,6 +669,7 @@
 		};
 		E90EBA7F2B2F8E9900E22E0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9303A452B34C2CE00083D00 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

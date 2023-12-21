@@ -14,11 +14,18 @@ class MoviesViewModel : ObservableObject {
     @Published var mostPopularMovies : [Movie] = []
     @Published var categories : [String] = []
     @Published var error : CustomError?
+    private var API_KEY : String
+    
+    init() {
+        API_KEY = ""
+        if let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String {
+            API_KEY = apiKey
+        }
+    }
     
     @MainActor
     func getMovies() async -> Void {
-        //TODO: api key move to variable
-        if let url = URL(string: "https://my.api.mockaroo.com/movies.json?key=cb03b960") {
+        if let url = URL(string: "https://my.api.mockaroo.com/movies.json?key=\(API_KEY)") {
             
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)

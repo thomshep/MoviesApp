@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  MoviesApp
+//
+//  Created by Thomas Sheppard on 21/12/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+API_KEY=cb03b960

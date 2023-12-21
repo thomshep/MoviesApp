@@ -88,9 +88,17 @@ struct MovieList: View {
             DispatchQueue.main.async {
                 movieList = moviesViewModel.movies
                 mostPopularMovieList = moviesViewModel.mostPopularMovies
-                if !movieList.isEmpty {
-                    isLoading = false
+                if movieList.isEmpty {
+                    //In case no objects are locally saved and api does not work
+                    moviesViewModel.movies = [Movie.getPlaceholderMovie()]
+                    moviesViewModel.mostPopularMovies = [Movie.getPlaceholderMovie()]
+                    moviesViewModel.moviesFiltered = moviesViewModel.movies
+                    moviesViewModel.getCategories()
+                    movieList = moviesViewModel.movies
+                    mostPopularMovieList = moviesViewModel.mostPopularMovies
+                    
                 }
+                isLoading = false
                 
             }
         }
