@@ -82,7 +82,7 @@ struct MovieList: View {
             }
         }
         
-        .background(Color( #colorLiteral(red: 0.11, green: 0.12, blue: 0.20, alpha: 1.00) ))
+        .background(Color( MovieColor.backgroundColor ))
         .task {
             await moviesViewModel.getMovies()
             DispatchQueue.main.async {

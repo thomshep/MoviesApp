@@ -17,8 +17,7 @@ struct SplashScreenView: View {
             
                 
         }
-        .background(Color( #colorLiteral(red: 0.11, green: 0.12, blue: 0.20, alpha: 1.00) ))
-        //.background(Color(UIColor(_colorLiteralRed: 3, green: 2, blue: 3, alpha: 1)))
+        .background(Color( MovieColor.backgroundColor ))
         
     }
 }

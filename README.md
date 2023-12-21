@@ -22,3 +22,4 @@ Se utilizó Swift Package Manager
 - Se piden permisos para usar la cámara y para usar el GPS. Hay una clase que se encarga de pedir estos permisos y cuando se abre la aplicación por primera vez, luego de mostrarse la splash screen se solicitan dichos permisos ni bien se renderiza la vista del listado de películas.
 - Hay filtro por nombre de película y por género de película.
 - Errores tipados usando un enum, con una variable con la descripción del error.
+- Varible de entorno para almacenar API_KEY

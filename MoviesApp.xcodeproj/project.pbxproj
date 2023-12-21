@@ -27,6 +27,7 @@
 		E9303A3D2B33EF5A00083D00 /* MovieScrollableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9303A3C2B33EF5A00083D00 /* MovieScrollableList.swift */; };
 		E9303A3F2B34AC7F00083D00 /* MovieDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9303A3E2B34AC7F00083D00 /* MovieDetailInfoView.swift */; };
 		E9303A442B34BDF600083D00 /* MovieRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9303A432B34BDF600083D00 /* MovieRealm.swift */; };
+		E9303A472B34F29700083D00 /* MovieColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9303A462B34F29700083D00 /* MovieColor.swift */; };
 		E944B3F72B2FB662005DCB7B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3F62B2FB662005DCB7B /* Movie.swift */; };
 		E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */; };
 		E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3FB2B2FD447005DCB7B /* Router.swift */; };
@@ -74,6 +75,7 @@
 		E9303A3E2B34AC7F00083D00 /* MovieDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInfoView.swift; sourceTree = "<group>"; };
 		E9303A432B34BDF600083D00 /* MovieRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRealm.swift; sourceTree = "<group>"; };
 		E9303A452B34C2CE00083D00 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E9303A462B34F29700083D00 /* MovieColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieColor.swift; sourceTree = "<group>"; };
 		E944B3F62B2FB662005DCB7B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
 		E944B3FB2B2FD447005DCB7B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				E928B5AD2B33C41100F457EC /* Permissions.swift */,
 				E928B5B62B33C85800F457EC /* LottieView.swift */,
 				E9303A452B34C2CE00083D00 /* Config.xcconfig */,
+				E9303A462B34F29700083D00 /* MovieColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */,
 				E90EBA592B2F8E9600E22E0D /* MovieList.swift in Sources */,
 				E928B5AE2B33C41100F457EC /* Permissions.swift in Sources */,
+				E9303A472B34F29700083D00 /* MovieColor.swift in Sources */,
 				E9303A3F2B34AC7F00083D00 /* MovieDetailInfoView.swift in Sources */,
 				E9303A352B33E1EB00083D00 /* GenreItemView.swift in Sources */,
 				E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */,
