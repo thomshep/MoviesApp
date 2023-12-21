@@ -3,7 +3,7 @@
 Aplicación iOS desarrollada en SwiftUI para mostrar un listado de películas y el detalle de cada una.
 
 ## Capturas
-
+![Listado de películas] (https://github.com/thomshep/MoviesApp/blob/main/images/List.png)
 ## Requisitos previos
 Xcode 15
 
