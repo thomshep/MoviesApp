@@ -88,7 +88,10 @@ struct MovieList: View {
             DispatchQueue.main.async {
                 movieList = moviesViewModel.movies
                 mostPopularMovieList = moviesViewModel.mostPopularMovies
-                isLoading = false
+                if !movieList.isEmpty {
+                    isLoading = false
+                }
+                
             }
         }
         .onChange(of: searchText, { oldValue, newValue in

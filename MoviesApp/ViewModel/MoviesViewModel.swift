@@ -28,7 +28,6 @@ class MoviesViewModel : ObservableObject {
                     self.error = .errorFetchingData
                 } else {
                     
-                    
                     self.movies = response.items
                     
                     getCategories()
@@ -62,13 +61,46 @@ class MoviesViewModel : ObservableObject {
         }
     }
     
+    // Get categories API is needed to make this more efficient
+    func getCategories() {
+        self.movies.forEach { movie in
+            movie.genreList.forEach { genre in
+                if !categories.contains(genre.value) {
+                    categories.append(genre.value)
+                }
+            }
+        }
+    }
+    
+    func filterMovies(filter: String, genre: String) {
+        if filter.isEmpty && genre.isEmpty {
+            self.moviesFiltered = self.movies
+        } else {
+            self.moviesFiltered = self.movies.filter { movie in
+                return (filter.isEmpty || movie.title.lowercased().contains(filter.lowercased())) &&
+                       (genre.isEmpty || movie.genreList.first(where: { genreItem in
+                                                return genreItem.key == genre
+                                            }) != nil)
+            }
+        }
+        
+    }
+    
+    func mostPopularMovies(moviesList : [Movie]) {
+        self.mostPopularMovies = moviesList.sorted { movie1, movie2 in
+            return Float(movie1.imDbRating) ?? 0 > Float(movie2.imDbRating) ?? 0
+        }
+    }
+    
+    //MARK: - Realm
     @MainActor
     func getCachedMovies() -> [Movie] {
         do {
             let realm = try Realm()
-            let objects = realm.objects(RealmMovie.self)
+            let objects = realm.objects(MovieRealm.self)
             let realmMovies = Array(objects)
             return realmMovies.map { realmMovie in
+                //Convert every MovieRealm to Movie type
                 return realmMovie.getMovie()
             }
         } catch {
@@ -88,44 +120,12 @@ class MoviesViewModel : ObservableObject {
             
             try realm.write {
                 for movie in movies {
-                    realm.add(movie.getPersistedObject())
+                    realm.add(MovieRealm.getPersistedObject(movie: movie))
                 }
             }
             
         } catch {
             print(error)
-        }
-    }
-    
-    // Get categories API is needed to make this more efficient
-    func getCategories() {
-        self.movies.forEach { movie in
-            movie.genreList.forEach { genre in
-                if !categories.contains(genre.value) {
-                    categories.append(genre.value)
-                }
-            }
-        }
-        print(categories)
-    }
-    
-    func filterMovies(filter: String, genre: String) {
-        if filter.isEmpty && genre.isEmpty {
-            self.moviesFiltered = self.movies
-        } else {
-            self.moviesFiltered = self.movies.filter { movie in
-                return (filter.isEmpty || movie.title.contains(filter)) && 
-                       (genre.isEmpty || movie.genreList.first(where: { genreItem in
-                                                return genreItem.key == genre
-                                            }) != nil)
-            }
-        }
-        
-    }
-    
-    func mostPopularMovies(moviesList : [Movie]) {
-        self.mostPopularMovies = moviesList.sorted { movie1, movie2 in
-            return Float(movie1.imDbRating) ?? 0 > Float(movie2.imDbRating) ?? 0
         }
     }
 }

@@ -7,117 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D09A0AF-B280-42C1-8078-48F66F14A168"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getCachedMovies()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9D09A0AF-B280-42C1-8078-48F66F14A168 - bacdafd01ee8294"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesApp.MoviesViewModel.getCachedMovies() -&gt; Swift.Array&lt;MoviesApp.Movie&gt;"
-                  moduleName = "MoviesApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thomas/Desktop/MoviesApp/MoviesApp/MoviesApp/ViewModel/MoviesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "9D09A0AF-B280-42C1-8078-48F66F14A168 - 4f90193fda98f28f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MoviesApp.RealmMovie) -&gt; MoviesApp.Movie in MoviesApp.MoviesViewModel.getCachedMovies() -&gt; Swift.Array&lt;MoviesApp.Movie&gt;"
-                  moduleName = "MoviesApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thomas/Desktop/MoviesApp/MoviesApp/MoviesApp/ViewModel/MoviesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "9D09A0AF-B280-42C1-8078-48F66F14A168 - bacdafd01ee8294"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesApp.MoviesViewModel.getCachedMovies() -&gt; Swift.Array&lt;MoviesApp.Movie&gt;"
-                  moduleName = "MoviesApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thomas/Desktop/MoviesApp/MoviesApp/MoviesApp/ViewModel/MoviesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "180">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8495F6DE-C8D1-4462-BA41-03F06E8B0FAF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "getCachedMovies()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8495F6DE-C8D1-4462-BA41-03F06E8B0FAF - bacdafd01ee8256"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesApp.MoviesViewModel.getCachedMovies() -&gt; Swift.Array&lt;MoviesApp.Movie&gt;"
-                  moduleName = "MoviesApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thomas/Desktop/MoviesApp/MoviesApp/MoviesApp/ViewModel/MoviesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "8495F6DE-C8D1-4462-BA41-03F06E8B0FAF - bacdafd01ee8256"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesApp.MoviesViewModel.getCachedMovies() -&gt; Swift.Array&lt;MoviesApp.Movie&gt;"
-                  moduleName = "MoviesApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thomas/Desktop/MoviesApp/MoviesApp/MoviesApp/ViewModel/MoviesViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "81ECB8EE-9B41-4708-B86B-04731D829EB3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -125,8 +14,8 @@
             filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "getMovies()"
             landmarkType = "7">
             <Locations>
@@ -236,8 +125,8 @@
             filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "getMovies()"
             landmarkType = "7">
             <Locations>
@@ -284,8 +173,8 @@
             filePath = "MoviesApp/ViewModel/MoviesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "getCategories()"
             landmarkType = "7">
          </BreakpointContent>

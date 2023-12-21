@@ -18,23 +18,22 @@ struct MovieDetailView: View {
                 VStack(spacing: 22) {
                     
                     VStack(alignment: .leading) {
+                        
                         HStack {
-                            
-                            VStack(alignment: .leading) {
-                                AsyncImage(url: URL(string: movie.image)) { image in
-                                    image
-                                        .resizable()
-                                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                                        .frame(width: 200, height: 360)
-                                        .aspectRatio(contentMode: .fit)
-                                }
+                            AsyncImage(url: URL(string: movie.image)) { image in
+                                image
+                                    .resizable()
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                    .frame(width: 200, height: 360)
+                                    .aspectRatio(contentMode: .fit)
+                            }
                             placeholder: {
                                 Color.white.opacity(0.1)
                                     .clipShape(RoundedRectangle(cornerRadius: 15))
                                     .frame(width: 200, height: 360)
                             }
                                 
-                            }
+                            
                             
                             Spacer()
                             
