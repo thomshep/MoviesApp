@@ -17,6 +17,11 @@
 		E928B56F2B33225500F457EC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E928B56E2B33225500F457EC /* Realm */; };
 		E928B5712B33225500F457EC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E928B5702B33225500F457EC /* RealmSwift */; };
 		E928B5AB2B3375A400F457EC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928B5AA2B3375A400F457EC /* Error.swift */; };
+		E928B5AE2B33C41100F457EC /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928B5AD2B33C41100F457EC /* Permissions.swift */; };
+		E928B5B02B33C71100F457EC /* camera.json in Resources */ = {isa = PBXBuildFile; fileRef = E928B5AF2B33C71100F457EC /* camera.json */; };
+		E928B5B22B33C78400F457EC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928B5B12B33C78400F457EC /* SplashScreenView.swift */; };
+		E928B5B52B33C84400F457EC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E928B5B42B33C84400F457EC /* Lottie */; };
+		E928B5B72B33C85800F457EC /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928B5B62B33C85800F457EC /* LottieView.swift */; };
 		E944B3F72B2FB662005DCB7B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3F62B2FB662005DCB7B /* Movie.swift */; };
 		E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */; };
 		E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944B3FB2B2FD447005DCB7B /* Router.swift */; };
@@ -53,6 +58,11 @@
 		E90EBA712B2F8E9900E22E0D /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		E90EBA732B2F8E9900E22E0D /* MoviesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E928B5AA2B3375A400F457EC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		E928B5AC2B33C3B000F457EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E928B5AD2B33C41100F457EC /* Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permissions.swift; sourceTree = "<group>"; };
+		E928B5AF2B33C71100F457EC /* camera.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera.json; sourceTree = "<group>"; };
+		E928B5B12B33C78400F457EC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		E928B5B62B33C85800F457EC /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E944B3F62B2FB662005DCB7B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E944B3F92B2FBB9F005DCB7B /* MovieItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemView.swift; sourceTree = "<group>"; };
 		E944B3FB2B2FD447005DCB7B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -67,6 +77,7 @@
 			files = (
 				E928B5712B33225500F457EC /* RealmSwift in Frameworks */,
 				E928B56F2B33225500F457EC /* Realm in Frameworks */,
+				E928B5B52B33C84400F457EC /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +121,8 @@
 		E90EBA552B2F8E9600E22E0D /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E928B5AF2B33C71100F457EC /* camera.json */,
+				E928B5AC2B33C3B000F457EC /* Info.plist */,
 				E944B3FF2B2FDF1B005DCB7B /* ViewModel */,
 				E944B3F82B2FBB92005DCB7B /* View */,
 				E944B3F52B2FB654005DCB7B /* Model */,
@@ -119,6 +132,9 @@
 				E90EBA5C2B2F8E9800E22E0D /* Preview Content */,
 				E944B3FB2B2FD447005DCB7B /* Router.swift */,
 				E928B5AA2B3375A400F457EC /* Error.swift */,
+				E928B5AD2B33C41100F457EC /* Permissions.swift */,
+				E928B5B12B33C78400F457EC /* SplashScreenView.swift */,
+				E928B5B62B33C85800F457EC /* LottieView.swift */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 			packageProductDependencies = (
 				E928B56E2B33225500F457EC /* Realm */,
 				E928B5702B33225500F457EC /* RealmSwift */,
+				E928B5B42B33C84400F457EC /* Lottie */,
 			);
 			productName = MoviesApp;
 			productReference = E90EBA532B2F8E9600E22E0D /* MoviesApp.app */;
@@ -267,6 +284,7 @@
 			mainGroup = E90EBA4A2B2F8E9600E22E0D;
 			packageReferences = (
 				E928B56D2B33225500F457EC /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E928B5B32B33C84400F457EC /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = E90EBA542B2F8E9600E22E0D /* Products */;
 			projectDirPath = "";
@@ -285,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90EBA5E2B2F8E9800E22E0D /* Preview Assets.xcassets in Resources */,
+				E928B5B02B33C71100F457EC /* camera.json in Resources */,
 				E90EBA5B2B2F8E9800E22E0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,9 +333,12 @@
 				E944B3FE2B2FD627005DCB7B /* MovieDetailView.swift in Sources */,
 				E944B3FA2B2FBB9F005DCB7B /* MovieItemView.swift in Sources */,
 				E90EBA592B2F8E9600E22E0D /* HomeView.swift in Sources */,
+				E928B5AE2B33C41100F457EC /* Permissions.swift in Sources */,
 				E944B3FC2B2FD447005DCB7B /* Router.swift in Sources */,
 				E944B4012B2FDF2B005DCB7B /* MoviesViewModel.swift in Sources */,
+				E928B5B22B33C78400F457EC /* SplashScreenView.swift in Sources */,
 				E90EBA572B2F8E9600E22E0D /* MoviesAppApp.swift in Sources */,
+				E928B5B72B33C85800F457EC /* LottieView.swift in Sources */,
 				E944B3F72B2FB662005DCB7B /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +505,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta aplicación utiliza la cámara";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Esta aplicación utiliza el GPS";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta aplicación utliza el GPS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -511,6 +537,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MoviesApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoviesApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta aplicación utiliza la cámara";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Esta aplicación utiliza el GPS";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta aplicación utliza el GPS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -651,6 +681,14 @@
 				kind = branch;
 			};
 		};
+		E928B5B32B33C84400F457EC /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -663,6 +701,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E928B56D2B33225500F457EC /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		E928B5B42B33C84400F457EC /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E928B5B32B33C84400F457EC /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
